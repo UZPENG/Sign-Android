@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">Sign</string>
+  <string name="ic_application">应用图标</string>
+  <string name="application_name">签到吧</string>
+  <string name="message">消息</string>
+  <string name="hint_for_search_box">搜索事件</string>
+  <string name="search">搜索</string>
+</resources>

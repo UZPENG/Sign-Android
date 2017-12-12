@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="56dp"
+              android:background="@color/colorPrimary">
+
+  <ImageView
+    android:id="@+id/message"
+    android:layout_height="25dp"
+    android:layout_width="25dp"
+    android:layout_margin="10dp"
+    android:layout_gravity="center"
+    android:src="@mipmap/ic_message"
+    android:contentDescription="@string/message"/>
+
+  <EditText
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_margin="12dp"
+    android:textSize="12sp"
+    android:hint="@string/hint_for_search_box"
+    android:background="@drawable/search_box_style"
+    android:visibility="gone"/>
+
+  <TextView
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:layout_gravity="center"
+    style="@style/title_text"
+    android:gravity="center"
+    android:textSize="18sp"
+    android:textColor="@android:color/white"
+    tools:text="活动"/>
+
+  <ImageView
+    android:layout_height="25dp"
+    android:layout_width="25dp"
+    android:layout_margin="10dp"
+    android:layout_gravity="center"
+    android:src="@mipmap/ic_search"
+    android:contentDescription="@string/search"/>
+
+</LinearLayout>
