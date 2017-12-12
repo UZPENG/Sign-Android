@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
@@ -7,14 +7,20 @@
   android:layout_height="match_parent"
   tools:context="com.uzpeng.sign.view.MainActivity">
 
-  <include layout="@layout/widget_main_title_bar"/>
+  <fragment
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/title_bar"
+    android:layout_above="@id/navigation_view"/>
 
   <android.support.design.widget.BottomNavigationView
     android:id="@+id/navigation_view"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:layout_weight="1dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    app:menu="@menu/navigation_items">
 
   </android.support.design.widget.BottomNavigationView>
 
-</LinearLayout>
+</RelativeLayout>

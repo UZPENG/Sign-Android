@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/title_bar"
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="56dp"
@@ -8,9 +9,9 @@
 
   <ImageView
     android:id="@+id/message"
-    android:layout_height="25dp"
-    android:layout_width="25dp"
-    android:layout_margin="10dp"
+    android:layout_height="20dp"
+    android:layout_width="20dp"
+    android:layout_margin="20dp"
     android:layout_gravity="center"
     android:src="@mipmap/ic_message"
     android:contentDescription="@string/message"/>
@@ -40,9 +41,9 @@
     tools:text="活动"/>
 
   <ImageView
-    android:layout_height="25dp"
-    android:layout_width="25dp"
-    android:layout_margin="10dp"
+    android:layout_height="20dp"
+    android:layout_width="20dp"
+    android:layout_margin="20dp"
     android:layout_gravity="center"
     android:src="@mipmap/ic_search"
     android:contentDescription="@string/search"/>

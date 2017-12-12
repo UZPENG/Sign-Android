@@ -6,4 +6,6 @@
   <color name="colorAccent">#FF4081</color>
 
   <color name="page_background">#fafafa</color>
+  <color name="name_text_color">#212121</color>
+  <color name="content_text_color">#424242</color>
 </resources>

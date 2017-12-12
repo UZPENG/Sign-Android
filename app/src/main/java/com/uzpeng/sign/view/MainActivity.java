@@ -21,4 +21,10 @@ public class MainActivity extends AppCompatActivity {
     buttomNavigateView = findViewById(R.id.navigation_view);
 
   }
+
+  @Override
+  public void onBackPressed() {
+    super.onBackPressed();
+    finish();
+  }
 }

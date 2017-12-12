@@ -6,6 +6,8 @@
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
+
+    <item name="android:selectableItemBackground">@null</item>
   </style>
 
   <style name="title_text">
@@ -15,6 +17,21 @@
     <item name="android:paddingBottom">5dp</item>
     <item name="android:paddingTop">5dp</item>
     <item name="android:layout_margin">12dp</item>
+  </style>
+
+  <style name='card_item_name'>
+    <item name="android:textSize">16sp</item>
+    <item name="android:textColor">@color/name_text_color</item>
+    <item name="android:layout_marginTop">5dp</item>
+    <item name="android:layout_marginBottom">5dp</item>
+    <item name="android:lineSpacingExtra">3dp</item>
+  </style>
+
+  <style name='card_item_content'>
+    <item name="android:textSize">15sp</item>
+    <item name="android:textColor">@color/content_text_color</item>
+    <item name="android:layout_margin">5dp</item>
+    <item name="android:lineSpacingExtra">3dp</item>
   </style>
 
 </resources>
