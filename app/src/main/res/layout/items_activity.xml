@@ -9,14 +9,16 @@
   <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp">
 
   <TextView
     android:id="@+id/act_name"
     style="@style/card_item_name"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="20sp"
+    android:paddingTop="3dp"
+    android:textSize="18sp"
     android:textColor="@color/colorPrimary"
     tools:text="双十二活动"/>
 
@@ -46,33 +48,53 @@
     android:layout_alignBaseline="@id/date"
     tools:text="2017年12月12日 晚上8点"/>
 
+    <TextView
+      android:id="@+id/loc"
+      style="@style/card_item_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/act_date"
+      tools:text="地点:"/>
+
+    <TextView
+      android:id="@+id/act_loc"
+      style="@style/card_item_content"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/act_date"
+      android:layout_toRightOf="@id/loc"
+      android:layout_toEndOf="@id/loc"
+      android:layout_alignBaseline="@id/loc"
+      tools:text="深圳大学"/>
+
   <TextView
     style="@style/card_item_name"
     android:id="@+id/content"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_below="@id/date"
+    android:layout_below="@id/loc"
     tools:text="内容:"/>
 
     <TextView
       android:id="@+id/act_content"
       style="@style/card_item_content"
       android:layout_width="wrap_content"
-      android:layout_below="@id/date"
+      android:layout_below="@id/loc"
       android:layout_height="wrap_content"
       android:layout_toRightOf="@id/content"
-      tools:text="双十二顾名思义是每年12月12日。继淘宝、京东双十一之后，淘宝网、京东等各大电商网站再
-      次传来消息，。"
+      tools:text="双十二顾名思义是每年12月12日。继淘宝、京东双十一之后，淘宝网、京东等各大电商网站再次传来消息。"
       android:layout_toEndOf="@id/content"/>
 
     <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:id="@+id/sign"
+      android:layout_width="60dp"
+      android:layout_height="40dp"
       android:layout_below="@id/act_content"
       android:background="@drawable/common_button_style"
       android:layout_centerInParent="true"
       android:textColor="@android:color/white"
-      android:layout_margin="10dp"
+      android:textSize="13sp"
+      android:layout_margin="5dp"
       tools:text="签到"/>
   </RelativeLayout>
 

@@ -5,14 +5,16 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context="com.uzpeng.sign.view.MainActivity">
+  tools:context="com.uzpeng.sign.view.impl.MainActivity">
 
-  <fragment
-    android:id="@+id/content"
+  <FrameLayout
+    android:id="@+id/navigation_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_below="@id/title_bar"
-    android:layout_above="@id/navigation_view"/>
+    android:layout_above="@id/navigation_view">
+
+  </FrameLayout>
 
   <android.support.design.widget.BottomNavigationView
     android:id="@+id/navigation_view"
