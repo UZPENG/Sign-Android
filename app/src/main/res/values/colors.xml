@@ -8,4 +8,6 @@
   <color name="page_background">#fafafa</color>
   <color name="name_text_color">#212121</color>
   <color name="content_text_color">#424242</color>
+  <color name="background_blue">#e1f5fe</color>
+  <color name="course_item">#ffffff</color>
 </resources>

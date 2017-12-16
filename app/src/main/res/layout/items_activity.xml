@@ -4,7 +4,10 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:layout_margin="20dp">
+  android:layout_marginLeft="20dp"
+  android:layout_marginRight="20dp"
+  android:layout_marginTop="10dp"
+  android:layout_marginBottom="10dp">
 
   <RelativeLayout
     android:layout_width="match_parent"
@@ -35,7 +38,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_below="@id/act_name"
-    tools:text="时间:"/>
+    android:text="@string/date"/>
 
   <TextView
     android:id="@+id/act_date"
@@ -54,7 +57,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@id/act_date"
-      tools:text="地点:"/>
+      android:text="@string/location"/>
 
     <TextView
       android:id="@+id/act_loc"
@@ -73,7 +76,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_below="@id/loc"
-    tools:text="内容:"/>
+    android:text="@string/content"/>
 
     <TextView
       android:id="@+id/act_content"
@@ -82,20 +85,21 @@
       android:layout_below="@id/loc"
       android:layout_height="wrap_content"
       android:layout_toRightOf="@id/content"
+      android:layout_alignBaseline="@id/content"
       tools:text="双十二顾名思义是每年12月12日。继淘宝、京东双十一之后，淘宝网、京东等各大电商网站再次传来消息。"
       android:layout_toEndOf="@id/content"/>
 
     <Button
       android:id="@+id/sign"
-      android:layout_width="60dp"
-      android:layout_height="40dp"
+      android:layout_width="50dp"
+      android:layout_height="30dp"
       android:layout_below="@id/act_content"
       android:background="@drawable/common_button_style"
       android:layout_centerInParent="true"
       android:textColor="@android:color/white"
       android:textSize="13sp"
-      android:layout_margin="5dp"
-      tools:text="签到"/>
+      android:layout_marginBottom="10dp"
+      android:text="@string/sign"/>
   </RelativeLayout>
 
 </android.support.v7.widget.CardView>

@@ -5,7 +5,8 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:orientation="vertical"
   android:layout_width="match_parent"
-  android:layout_height="match_parent">
+  android:layout_height="match_parent"
+  android:background="@color/qmui_config_color_background">
 
   <include layout="@layout/widget_main_title_bar"/>
 
@@ -13,14 +14,16 @@
     android:id="@+id/emptyView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="100dp"
+    android:layout_gravity="center|center_vertical"
     android:background="@color/qmui_config_color_white"/>
 
   <android.support.v7.widget.RecyclerView
   android:id="@+id/activity"
-  xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:visibility="gone">
+  android:paddingTop="10dp"
+  android:visibility="invisible">
 
   </android.support.v7.widget.RecyclerView>
 

@@ -5,6 +5,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:background="@color/qmui_config_color_background"
   tools:context="com.uzpeng.sign.view.impl.MainActivity">
 
   <FrameLayout
@@ -13,7 +14,6 @@
     android:layout_height="match_parent"
     android:layout_below="@id/title_bar"
     android:layout_above="@id/navigation_view">
-
   </FrameLayout>
 
   <android.support.design.widget.BottomNavigationView
@@ -21,7 +21,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    app:menu="@menu/navigation_items">
+    android:background="@color/qmui_config_color_white"
+    app:menu="@menu/navigation_items"
+    app:itemIconTint="@drawable/ic_navigation_selector"
+    app:itemTextColor="@drawable/ic_navigation_selector"
+    app:elevation="8dp">
 
   </android.support.design.widget.BottomNavigationView>
 

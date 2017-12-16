@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <RelativeLayout
+    android:id="@+id/title_course"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/colorPrimary">
+
+    <TextView
+      android:id="@+id/semester"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@android:color/white"
+      android:layout_centerInParent="true"
+      android:gravity="center"
+      tools:text="大四 第一学期 "/>
+
+    <ImageView
+      android:layout_width="15dp"
+      android:layout_height="15dp"
+      android:src="@mipmap/arrow_down"
+      android:layout_margin="5dp"
+      android:layout_toRightOf="@id/semester"
+      android:layout_centerVertical="true"
+      android:contentDescription="@string/arrow" android:layout_toEndOf="@id/semester"/>
+  </RelativeLayout>
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+      android:id="@+id/semester_list"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:visibility="visible"/>
+
+    <include layout="@layout/items_course_row"/>
+
+    <android.support.v7.widget.RecyclerView
+      android:id="@+id/course_list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+  </LinearLayout>
+
+</FrameLayout>
+
+
+
+
+

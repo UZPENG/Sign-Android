@@ -12,5 +12,5 @@ public interface Url {
   /**
    * 请求首页活动列表
    */
-  String REQUEST_ACT = BASE_URL+"http://www.mocky.io/v2/5a3127ca2e0000271fe3b35f";
+  String REQUEST_ACT = BASE_URL+"http://www.mocky.io/v2/";
 }

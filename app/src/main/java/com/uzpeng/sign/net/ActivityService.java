@@ -10,6 +10,6 @@ import retrofit2.http.GET;
  */
 
 public interface ActivityService {
-  @GET(Url.REQUEST_ACT)
+  @GET("5a3210f92e00002f43e3b68e")
   Call<ActivityEntity> activityList();
 }

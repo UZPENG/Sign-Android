@@ -35,6 +35,6 @@ public class ActivityPresenterImpl implements ActivityPresenter,ActivityView.Act
 
   @Override
   public void  onResponseActivityList(ActivityEntity activityEntity) {
-
+    activityView.onResponseActivityList(activityEntity);
   }
 }

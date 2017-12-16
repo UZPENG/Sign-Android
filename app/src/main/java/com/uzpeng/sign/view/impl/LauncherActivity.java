@@ -17,7 +17,14 @@ public class LauncherActivity extends AppCompatActivity {
     //todo
     Handler handler = new Handler();
     handler.postDelayed(()->{
-      startActivity(new Intent(this, MainActivity.class));
+      Intent intent = new Intent(this, MainActivity.class);
+      startActivity(intent);
+      LauncherActivity.this.finish();;
     }, 2000);
+  }
+
+  @Override
+  protected void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
   }
 }

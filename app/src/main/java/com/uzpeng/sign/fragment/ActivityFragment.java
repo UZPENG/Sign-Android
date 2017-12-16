@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.qmuiteam.qmui.widget.QMUIEmptyView;
 import com.uzpeng.sign.R;
 import com.uzpeng.sign.entity.ActivityEntity;
+import com.uzpeng.sign.view.impl.MainActivity;
 
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class ActivityFragment extends Fragment {
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-    return LayoutInflater.from(getActivity()).inflate(R.layout.frag_activity, null);
+    return LayoutInflater.from(getActivity()).inflate(R.layout.frag_activity, container, false);
   }
 
   @Override
@@ -50,13 +51,19 @@ public class ActivityFragment extends Fragment {
   }
 
   public void initData(ActivityEntity entity){
-    if(entity != null) {
+    if(entity !=null && entity.getAct_list() != null) {
       emptyView.show(false);
+      emptyView.hide();
       activitiesList.setAdapter(new ActivitiesAdapter(entity));
       activitiesList.setVisibility(View.VISIBLE);
     } else {
-      emptyView.show(false, "加载失败", null, "重试", null);
+      emptyView.show(false, "加载失败", null, "重试", (view)-> requestRetry());
     }
+  }
+
+  public void requestRetry(){
+    emptyView.show(true);
+    ((MainActivity)mainActivity).requestActivityList();
   }
 
   private class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesViewHolder>{
@@ -68,7 +75,7 @@ public class ActivityFragment extends Fragment {
 
     @Override
     public ActivitiesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-      return new ActivitiesViewHolder(LayoutInflater.from(mainActivity).inflate(R.layout.items_activity, parent));
+      return new ActivitiesViewHolder(LayoutInflater.from(mainActivity).inflate(R.layout.items_activity, parent, false));
     }
 
     @Override
@@ -97,7 +104,7 @@ public class ActivityFragment extends Fragment {
       title = itemView.findViewById(R.id.act_name);
       date = itemView.findViewById(R.id.act_date);
       loc = itemView.findViewById(R.id.act_loc);
-      content = itemView.findViewById(R.id.content);
+      content = itemView.findViewById(R.id.act_content);
       sign = itemView.findViewById(R.id.sign);
     }
   }
